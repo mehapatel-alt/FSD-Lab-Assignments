@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Book Your Ticket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+            padding: 20px;
+            max-width: 500px;
+            margin: auto;
+        }
+        h1 {
+            color: black;
+            text-align: center;
+        }
+        form {
+            background-color: lightgreen;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 8px;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border: 1px solid #999;
+            border-radius: 4px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Book Your Ticket</h1>
+
+    <form action="#" method="post">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name" />
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="Enter 10-digit phone number" />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email (optional)" />
+
+        <label for="train">Train Number:</label>
+        <select id="train" name="train" required>
+            <option value="">-- Select Train --</option>
+            <option value="11011">11011 - Mumbai to Pune</option>
+            <option value="12123">12123 - Delhi to Pune</option>
+            <option value="15045">15045 - Bangalore to Pune</option>
+            <option value="12567">12567 - Chennai to Pune</option>
+            <option value="13089">13089 - Hyderabad to Pune</option>
+        </select>
+
+        <label for="tickets">Number of Tickets:</label>
+        <input type="number" id="tickets" name="tickets" min="1" max="10" value="1" required />
+
+        <button type="submit">Submit Booking</button>
+    </form>
+
+</body>
+</html>

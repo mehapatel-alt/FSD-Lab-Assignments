@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Dynamic Page</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Page Header -->
+        <header>
+            <h1 id="title">Professional Dynamic DOM Page</h1>
+            <p class="subtitle">Interact with this professional dynamic page!</p>
+        </header>
+
+        <!-- Image Card -->
+        <div class="card">
+            <img id="myImage" src="https://via.placeholder.com/200?text=Book" alt="Dynamic Image">
+            <button id="changeImageBtn" class="btn">Show Random Image</button>
+        </div>
+
+        <!-- Paragraph Card -->
+        <div class="card">
+            <input type="text" id="userText" placeholder="Enter text to add" class="text-input">
+            <button id="addTextNode" class="btn">Add Text Node</button>
+            <button id="deleteNode" class="btn">Delete Last Paragraph</button>
+            <div id="output"></div>
+        </div>
+
+        <!-- Form Card -->
+        <div class="card">
+            <form id="myForm">
+                <input type="text" id="username" placeholder="Enter Username" required>
+                <input type="email" id="email" placeholder="Enter Email" required>
+                <button type="submit" class="btn">Submit Form</button>
+            </form>
+        </div>
+
+        <!-- Button Card -->
+        <div class="card">
+            <button id="changeButtonText" class="btn">Click Me</button>
+        </div>
+    </div>
+
+    <!-- External JS -->
+    <script src="script.js"></script>
+</body>
+</html>

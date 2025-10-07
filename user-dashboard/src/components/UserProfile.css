@@ -1,0 +1,165 @@
+/* Dashboard Container */
+.user-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center everything horizontally */
+  width: 100%;
+  max-width: 500px;
+  background: #2c2c3e;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  padding: 25px;
+  gap: 25px;
+}
+
+/* Profile Card */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #4e4e66;
+  margin-bottom: 15px;
+}
+
+.profile-card h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+/* Stats Cards */
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.stat-card {
+  background: #3a3a50;
+  padding: 10px 15px;
+  border-radius: 12px;
+  min-width: 70px;
+  transition: background 0.3s;
+}
+
+.stat-card:hover {
+  background: #4e4e66;
+}
+
+.stat-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffcc00;
+  margin: 0;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin: 0;
+}
+
+/* Activities Card */
+.activities-card {
+  width: 100%;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.activities-card h3 {
+  margin-bottom: 15px;
+  color: #ccc;
+  font-size: 1.3rem;
+}
+
+/* Scrollbar Styling */
+.activities-card::-webkit-scrollbar {
+  width: 6px;
+}
+.activities-card::-webkit-scrollbar-thumb {
+  background-color: #4e4e66;
+  border-radius: 10px;
+}
+.activities-card::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Activity List */
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.activity-card {
+  display: flex;
+  align-items: center;
+  background: #3a3a50;
+  padding: 12px 15px;
+  border-radius: 14px;
+  transition: background 0.3s;
+}
+
+.activity-card:hover {
+  background: #4e4e66;
+}
+
+.activity-icon {
+  font-size: 1.4rem;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+/* Activity type colors */
+.activity-card.post .activity-icon { color: #00aaff; }
+.activity-card.status .activity-icon { color: #ffaa00; }
+.activity-card.like .activity-icon { color: #ff4444; }
+.activity-card.comment .activity-icon { color: #00ff88; }
+.activity-card.edit .activity-icon { color: #cc66ff; }
+
+.activity-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.activity-text {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.activity-time {
+  color: #aaa;
+  font-size: 0.85rem;
+  margin: 2px 0 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 500px) {
+  .user-dashboard {
+    padding: 20px;
+  }
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+  .activity-text {
+    font-size: 0.95rem;
+  }
+  .stats-container {
+    gap: 10px;
+  }
+  .stat-card {
+    padding: 8px 12px;
+  }
+}

@@ -1,0 +1,149 @@
+/* General Page Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* White/light gray background */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    text-align: center;
+}
+
+/* Header */
+header h1 {
+    color: #222;
+    margin-bottom: 5px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+header .subtitle {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+/* Card Layout */
+.card {
+    background-color: #fefefe;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Paragraphs and Input */
+.text-input {
+    width: 70%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Paragraphs */
+#output span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+    display: block;
+    margin: 4px 0;
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Image */
+#myImage {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    border: 2px solid #007bff;
+    margin-bottom: 10px;
+    transition: transform 0.5s, box-shadow 0.3s, opacity 0.5s;
+    opacity: 1;
+}
+
+.spin {
+    animation: spin 0.5s linear;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Buttons */
+.btn {
+    margin: 8px 5px;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.18);
+}
+
+/* Form Inputs */
+form input[type="text"],
+form input[type="email"] {
+    width: 90%;
+    padding: 10px 12px;
+    margin: 8px 0 15px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    #myImage {
+        width: 150px;
+        height: 150px;
+    }
+    .btn {
+        width: 80%;
+        margin: 10px 0;
+    }
+}
